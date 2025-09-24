@@ -102,7 +102,6 @@ def get_temp_desc(temp):
 start = datetime(2020, 1, 1)
 end = datetime(2024, 12, 31)
 
-results = []
 desc_stats = []
 
 # 定义desc的显示顺序
@@ -144,10 +143,6 @@ for city in cities:
             "description": desc,
             "percentage": percentage
         })
-
-# 转为DataFrame
-df = pd.DataFrame(results)
-print(df)
 
 # 新增：统计desc字段各情况下的天数百分比并输出表格和条形图
 desc_df = pd.DataFrame(desc_stats)
